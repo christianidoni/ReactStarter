@@ -1,8 +1,10 @@
 import React from "react";
-import Navigation from "./components/Navigation/Navigation";
-import SingleCard from "./components/SingleCard/SingleCard";
 import "./App.css";
 import { Grid } from "@mui/material";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Navigation from "./components/Navigation/Navigation";
+import SingleCard from "./components/SingleCard/SingleCard";
+import Footer from "./components/Footer/Footer";
 
 const mockData = [
   {
@@ -40,14 +42,14 @@ const mockData = [
     time: "1hr:42mins",
   },
   {
-    id: 4,
+    id: 6,
     name: "Van Helsing",
     image:
       "https://m.media-amazon.com/images/M/MV5BODRmY2NhNDItOWViNi00OTIyLTk3YjYtYzY0YTFlMDg1YzQ0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
     time: "2hr:11mins",
   },
   {
-    id: 4,
+    id: 7,
     name: "Saw III",
     image:
       "https://m.media-amazon.com/images/I/516TE58EAPL._UF1000,1000_QL80_.jpg",
@@ -76,6 +78,7 @@ const App = () => {
           </Grid>
         ))}
       </Grid>
+      <Footer />
     </div>
   );
 };

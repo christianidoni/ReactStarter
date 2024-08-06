@@ -17,7 +17,7 @@ const Navigation = () => {
   return (
     <CustomAppBar position="static">
       <Toolbar>
-        <img src={logo} alt="Logo" className="logo" /> {}
+        <img src={logo} alt="Logo" className="logo" />
         <Typography
           variant="h6"
           component="div"
