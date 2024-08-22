@@ -32,13 +32,19 @@ const SingleItemTabs = () => {
       >
         <Tab
           label="Description"
-          sx={{ color: value === 0 ? "#B82B24" : "white" }}
-          style={{ padding: "25px 40px", textTransform: "none" }}
+          sx={{
+            color: value === 0 ? "#B82B24" : "white",
+            padding: "25px 40px",
+            textTransform: "none",
+          }}
         />
         <Tab
           label="Series"
-          sx={{ color: value === 1 ? "#B82B24" : "white" }}
-          style={{ padding: "25px 40px", textTransform: "none" }}
+          sx={{
+            color: value === 1 ? "#B82B24" : "white",
+            padding: "25px 40px",
+            textTransform: "none",
+          }}
         />
       </Tabs>
       {value === 0 && (
@@ -58,13 +64,14 @@ const SingleItemTabs = () => {
         </Box>
       )}
       {value === 1 && selectedFilm && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 3, backgroundColor: "#141414" }}>
           <Typography sx={{ color: "white", backgroundColor: "#23262B" }}>
             <table
               style={{
                 width: "100%",
                 color: "white",
                 borderCollapse: "collapse",
+                tableLayout: "fixed",
               }}
             >
               <thead>
@@ -78,7 +85,12 @@ const SingleItemTabs = () => {
                   <th style={{ textAlign: "left", width: "20%" }}>Rating</th>
                 </tr>
               </thead>
-              <tbody style={{ backgroundColor: "#191919", textAlign: "left" }}>
+              <tbody
+                style={{
+                  backgroundColor: "#191919",
+                  textAlign: "left",
+                }}
+              >
                 <tr>
                   <td style={{ padding: "8px" }}>none</td>
                   <td style={{ padding: "8px" }}>{selectedFilm.show.ended}</td>
@@ -89,7 +101,7 @@ const SingleItemTabs = () => {
                     <GradeIcon />
                     <GradeIcon />
                     <span style={{ color: "white" }}>
-                      {selectedFilm.show.rating?.average ?? "?"}
+                      {selectedFilm.show.rating?.average ?? ""}
                     </span>
                   </td>
                 </tr>

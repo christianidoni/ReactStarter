@@ -2,7 +2,6 @@ import { Grid, Box } from "@mui/material";
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { FilmsContext } from "../context/FilmsContext";
-import Footer from "../components/Footer/Footer";
 import SingleItemHeader from "../components/SingleItemHeader/SingleItemHeader";
 import SingleItemTabs from "../components/SingleItemTabs/SingleItemTabs";
 
@@ -16,7 +15,9 @@ const SingleFilm = () => {
   }
 
   return (
-    <Box sx={{ backgroundColor: "#141414", minHeight: "100vh" }}>
+    <Box
+      sx={{ backgroundColor: "#141414", minHeight: "100vh", padding: "20px" }}
+    >
       <Grid container>
         <Grid item xs={12}>
           <SingleItemHeader film={selectedFilm} />
@@ -24,9 +25,6 @@ const SingleFilm = () => {
       </Grid>
       <Box sx={{ mt: 5 }}>
         <SingleItemTabs film={selectedFilm} />
-      </Box>
-      <Box sx={{ mt: 10 }}>
-        <Footer />
       </Box>
     </Box>
   );

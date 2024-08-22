@@ -43,6 +43,12 @@ const SingleItemHeader = () => {
                 border: "4px solid gray",
                 borderRadius: "50%",
                 p: 1,
+                flexShrink: 0,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  bgcolor: "#B82B24",
+                  color: "black",
+                },
               }}
             >
               <ShareIcon />
@@ -53,6 +59,12 @@ const SingleItemHeader = () => {
                 border: "4px solid gray",
                 borderRadius: "50%",
                 p: 1,
+                flexShrink: 0,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  bgcolor: "#B82B24",
+                  color: "black",
+                },
               }}
             >
               <FavoriteIcon />
@@ -63,6 +75,12 @@ const SingleItemHeader = () => {
                 border: "4px solid gray",
                 borderRadius: "50%",
                 p: 1,
+                flexShrink: 0,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  bgcolor: "#B82B24",
+                  color: "black",
+                },
               }}
             >
               <AddIcon />
@@ -76,6 +94,9 @@ const SingleItemHeader = () => {
             ml: 2,
             width: 170,
             height: 100,
+            flexShrink: 0,
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
           <GradeIcon />
@@ -85,13 +106,13 @@ const SingleItemHeader = () => {
           <GradeIcon />
         </Box>
         <Typography sx={{ lineHeight: "70px", ml: 2 }}>
-          {rating?.average ?? "?"}
+          {rating?.average ?? ""}
         </Typography>
         <Box sx={{ flexShrink: 0, ml: 2 }}>
           <img
             src={image?.medium ?? ""}
             alt={`${name} Poster`}
-            style={{ borderRadius: "8px" }}
+            style={{ borderRadius: "8px", maxWidth: "170px" }}
           />
         </Box>
       </Box>
@@ -100,121 +121,3 @@ const SingleItemHeader = () => {
 };
 
 export default SingleItemHeader;
-
-// import React, { useContext } from "react";
-// import { useParams } from "react-router-dom";
-// import { FilmsContext } from "../../context/FilmsContext";
-// import GradeIcon from "@mui/icons-material/Grade";
-// import ShareIcon from "@mui/icons-material/Share";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-// import AddIcon from "@mui/icons-material/Add";
-// import useFormatDate from "../../hooks/useFormatDate";
-// import useFormatRuntime from "../../hooks/useFormatRuntime";
-
-// const SingleItemHeader = () => {
-//   const { filmId } = useParams();
-//   const { data } = useContext(FilmsContext);
-//   const selectedFilm = data?.find((el) => el.show.id === parseInt(filmId));
-
-//   const formatRuntime = useFormatRuntime();
-//   const formatDate = useFormatDate();
-
-//   if (!selectedFilm) {
-//     return <div>Film not found</div>;
-//   }
-
-//   return (
-//     <div style={{ padding: "20px" }}>
-//       <div
-//         style={{
-//           display: "inline-flex",
-//           textAlign: "left",
-//           width: "100%",
-//           float: "left",
-//           padding: "0 10px",
-//           color: "#dedede",
-//           backgroundColor: "#141414",
-//         }}
-//       >
-//         <div>
-//           <h2 style={{ textTransform: "uppercase" }}>
-//             {selectedFilm.show.name}
-//           </h2>
-//           <p style={{ color: "#BE2C25" }}>
-//             {selectedFilm.show.genres.join(", ")}
-//           </p>
-//           <ul style={{ display: "flex", gap: "30px", width: "250px" }}>
-//             <li>{formatRuntime(selectedFilm.show.runtime)}</li>
-//             <li>{formatDate(selectedFilm.show.ended)}</li>
-//           </ul>
-//           <ul
-//             style={{
-//               display: "flex",
-//               listStyleType: "none",
-//               gap: "30px",
-//               width: "250px",
-//               color: "#D22F27",
-//             }}
-//           >
-//             <li>
-//               <ShareIcon
-//                 style={{
-//                   background: "#fff",
-//                   border: "4px solid gray",
-//                   borderRadius: "50%",
-//                   padding: "3px",
-//                 }}
-//               />
-//             </li>
-//             <li>
-//               <FavoriteIcon
-//                 style={{
-//                   background: "#fff",
-//                   border: "4px solid gray",
-//                   borderRadius: "50%",
-//                   padding: "3px",
-//                 }}
-//               />
-//             </li>
-//             <li>
-//               <AddIcon
-//                 style={{
-//                   background: "#fff",
-//                   border: "4px solid gray",
-//                   borderRadius: "50%",
-//                   padding: "3px",
-//                 }}
-//               />
-//             </li>
-//           </ul>
-//         </div>
-//         <div
-//           style={{
-//             color: "#D22F27",
-//             lineHeight: "80px",
-//             marginLeft: "20px",
-//             width: "170px",
-//             height: "100px",
-//           }}
-//         >
-//           <GradeIcon />
-//           <GradeIcon />
-//           <GradeIcon />
-//           <GradeIcon />
-//           <GradeIcon />
-//         </div>
-//         <span style={{ lineHeight: "70px" }}>
-//           {selectedFilm.show.rating?.average ?? "?"}
-//         </span>
-//         <div style={{ float: "right", width: "100%" }}>
-//           <img
-//             src={selectedFilm.show.image?.medium ?? ""}
-//             style={{ float: "right", marginRight: "20px", borderRadius: "8px" }}
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default SingleItemHeader;

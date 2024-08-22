@@ -1,73 +1,72 @@
-.Footer {
-  padding: 30px 30px 10px;
-  color: rgb(226, 226, 226);
-  background-color: rgb(22, 22, 22);
-  display: flex;
-  gap: 10px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+footer {
+  /* margin-top: 15px; */
+  border-radius: 0;
   width: 100%;
-  z-index: 1000;
-  box-sizing: border-box;
+  min-height: 150px;
+  background: #000;
+  padding: 20px;
 }
 
-.TextContainer {
-  width: 58%;
-  text-align: left;
-}
-
-.TextContainer a {
-  margin-right: 20px;
-  color: rgb(226, 226, 226);
-  text-decoration: none;
-}
-
-.TextContainer a:hover {
-  text-decoration: underline;
-}
-
-.IconsContainer {
-  text-align: left;
-}
-
-.IconsContainer p {
-  padding-left: 30px;
-}
-
-.FooterIcons {
+.container {
+  padding: 50px 75px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.FooterIcons li {
-  list-style-type: none;
-}
-
-.FooterIcons a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-  background: rgb(39, 39, 39);
-  border-radius: 50%;
-  font-size: 20px;
+a {
+  text-decoration: none;
   color: #fff;
 }
 
-.FooterIcons a:hover {
-  background-color: rgb(59, 59, 59);
-}
-
-.WatchitApp {
-  text-align: left;
-  margin-left: 30px;
-}
-
-.DownloadIcons {
+.listUnstyled {
+  padding: 0;
   display: flex;
+  list-style: none;
   gap: 20px;
+}
+
+.text {
+  color: #fff;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+.listInline {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.listInline li a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.listInline li a:hover {
+  color: red;
+}
+
+.block2,
+.block3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockTitle {
+  color: #fff;
+}
+
+.payImg {
+  margin-top: 10px;
+  display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.payImg img {
+  width: 135px;
 }

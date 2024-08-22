@@ -1,15 +1,15 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Footer from "../components/Footer/Footer";
 import SingleItemHeader from "../components/SingleItemHeader/SingleItemHeader";
 import SingleItemTabs from "../components/SingleItemTabs/SingleItemTabs";
 
 const Films = () => {
   return (
-    <Box>
+    <Box
+      sx={{ backgroundColor: "#141414", minHeight: "100vh", padding: "20px" }}
+    >
       <SingleItemHeader />
       <SingleItemTabs />
-      <Footer />
     </Box>
   );
 };

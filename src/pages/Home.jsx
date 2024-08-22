@@ -3,7 +3,6 @@ import { Grid, TextField, Box } from "@mui/material";
 import SingleCard from "../components/SingleCard/SingleCard";
 import { useNavigate } from "react-router-dom";
 import { FilmsContext } from "../context/FilmsContext";
-import Footer from "../components/Footer/Footer";
 
 function Home() {
   const { data, search, setSearch, error } = useContext(FilmsContext);
@@ -23,8 +22,10 @@ function Home() {
   };
 
   return (
-    <>
-      <Grid container spacing={2} sx={{ marginTop: "20px" }}>
+    <Box
+      sx={{ backgroundColor: "#141414", minHeight: "100vh", padding: "20px" }}
+    >
+      <Grid container spacing={2}>
         <Grid item xs={12}>
           <Box display={"flex"} justifyContent={"center"}>
             <TextField
@@ -57,8 +58,7 @@ function Home() {
           <div>No results found.</div>
         )}
       </Grid>
-      <Footer />
-    </>
+    </Box>
   );
 }
 
